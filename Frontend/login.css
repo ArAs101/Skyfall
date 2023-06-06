@@ -1,0 +1,52 @@
+body {
+    background-image: -webkit-linear-gradient(top left, yellow 0%, blue 100%);
+}
+
+h1 {
+    background-color: green;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 60pt;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+div.session-management {
+    text-align: right;
+    background-color: orange;
+    padding: 1px;
+}
+
+div.gui {
+    background-color: orange;
+    padding: 5px;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    margin: 0 auto;
+}
+
+div.results {
+    background-color: red;
+    width: 500px;
+    height: 500px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid green;
+    border-radius: 50%;
+}
+
+form {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    background-color: orange;
+}

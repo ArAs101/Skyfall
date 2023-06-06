@@ -1,0 +1,61 @@
+body {
+    background-image: -webkit-linear-gradient(top left, yellow 0%, blue 100%);
+}
+
+h1 {
+    background-color: green;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 60pt;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+div.session-management {
+    text-align: right;
+    background-color: orange;
+    padding: 1px;
+}
+
+div.gui {
+    background-color: orange;
+    padding: 5px;
+    text-align: center;
+}
+
+main {
+    text-align: center;
+    margin: 0 auto;
+    display: none;
+}
+
+#results {
+    /*background-color: red;*/
+    width: 475px;
+    height: 475px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border: 5px dotted black;
+    border-radius: 50%;
+}
+
+#image {
+    width: 350px;
+    height: 350px;
+    /*border-radius: 50%;*/
+
+}
+
+.circleText {
+    font-size: 40px;
+    padding: -5px;
+}
+
+footer {
+    text-align: center;
+    background-color: orange;
+}
