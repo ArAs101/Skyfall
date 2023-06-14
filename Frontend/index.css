@@ -1,61 +1,49 @@
-body {
-    background-image: -webkit-linear-gradient(top left, yellow 0%, blue 100%);
+@import url(grid-base.css);
+
+/*article {
+  background-color: lightgray;
+  border-radius: 16px;
+  padding: 16px;
+  width: 384px;
+  margin: 8px;
 }
 
-h1 {
-    background-color: green;
-    text-align: center;
-    text-decoration: underline;
-    font-size: 60pt;
-}
+article button {
+  margin: 0px 2px;
+}*/
 
-h2 {
-    text-align: center;
-    text-decoration: underline;
-}
-
-div.session-management {
-    text-align: right;
-    background-color: orange;
-    padding: 1px;
-}
-
-div.gui {
-    background-color: orange;
-    padding: 5px;
-    text-align: center;
+.session-management {
+  background-color: blue;
+  text-align: center;
 }
 
 main {
-    text-align: center;
-    margin: 0 auto;
-    display: none;
+  /*display: grid;
+  ;*/
 }
 
-#results {
-    /*background-color: red;*/
-    width: 475px;
-    height: 475px;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    border: 5px dotted black;
-    border-radius: 50%;
+span {
+  margin-right: 4px;
 }
 
-#image {
-    width: 350px;
-    height: 350px;
-    /*border-radius: 50%;*/
+/*.genre {
+  padding: 4px 8px;
+  border: solid black 1px;
+  border-radius: 6px;
+  background-color: darkgray;
+  font-weight: bold;
+}*/
 
+#sidebar {
+  background-color: green;
 }
 
-.circleText {
-    font-size: 40px;
-    padding: -5px;
+main {
+  background-color: orange;
+  text-align: center;
 }
 
 footer {
-    text-align: center;
-    background-color: orange;
+  background-color: blue;
+  text-align: center;
 }
