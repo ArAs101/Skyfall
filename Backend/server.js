@@ -2,13 +2,114 @@ const express = require("express");
 const path = require("path");
 const http = require("http");
 const bodyParser = require("body-parser");
-const movieModel = require("./movie-model.js");
 const {send} = require("process");
 const axios = require("axios");
 const {stringify} = require("querystring");
+const {response, json} = require("express");
 
+const API_KEY = 'c3f5d777155024ea1c2c209f90f0f34e';
 const app = express();
+/*const users = []
+const bcrypt = require('bcrypt')
 
+app.use(express.urlencoded({extended: false}))*/
+
+app.use(express.static(path.join(__dirname, 'Frontend')));
+
+app.get("/getweather", async function (req, res) {
+    // Access the city ID from the request query parameters
+
+    const city = req.query.city; // use a query parameter to get the city
+    const geo_api_response = await axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${API_KEY}`);
+
+    if (geo_api_response.data[0]) {
+        const lat = geo_api_response.data[0].lat
+        const lon = geo_api_response.data[0].lon
+
+        const owm_response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
+        const cityName = geo_api_response.data[0].name
+        const temperature = owm_response.data.main.temp;
+        const state = owm_response.data.weather;
+        const infoTobeSentback = {
+            "cityName": cityName,
+            "temperature": temperature,
+            "weatherState": state
+        }
+        res.json(infoTobeSentback)
+    } else {
+        res.status(404).send('City not found');
+    }
+})
+
+
+/*
+app.get("/list", function (req, res) {
+    const apiKey = "c3f5d777155024ea1c2c209f90f0f34e"
+    const input = req.query.location // von index.html
+    axios.get(`https://api.openweathermap.org/geo/1.0/direct?q=${input}&appid=${apiKey}`).then((response) => {
+        const weather = response.data.list[0];
+        res.send(weather)
+/!*        if (response.status === 200) {
+
+            const lat = response.data[0].lat
+            const lon = response.data[0].lon
+
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`).then((reply) => {
+                    const temperature = reply.data.main.temp
+                    const state = reply.data.weather
+                    const infoTobeSentback = {
+                        "temperature" : temperature,
+                        "weatherState" : state
+                    }
+                    res.json(infoTobeSentback)
+                    /!*let results_div = document.getElementById("results")
+                    results_div.append(json(infoTobeSentback))*!/
+                })
+        }*!/
+    }).catch(error => {
+        console.error(error);
+        // Behandle den Fehler und sende eine entsprechende Antwort an den Client
+        res.status(500).send('Fehler beim Abrufen des zufälligen Gerichts');
+    });
+})
+*/
+
+
+
+
+/*app.post("/userregister", async function (req, res) {     // ab hier vom Video
+    // try {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10)
+        users.push({
+            id: Date.now().toString(),
+            username: req.body.username,
+            password: hashedPassword
+        })
+        const button = document.getElementById("register_button")
+    /!*} catch {
+
+    }*!/
+})*/
+/*
+app.put("/userlogin", function (req, res) {
+
+
+
+})
+
+app.post("/userregister", function (req, res) {
+
+
+
+})
+
+app.delete("/userremove", function (req, res) {
+
+
+
+})*/
+
+/*
 // Parse urlencoded bodies
 app.use(bodyParser.json());
 
@@ -58,9 +159,9 @@ app.get("/genres", function (req, res) {
     res.send(genres);
 });
 
-/* Task 1.1. Add the GET /search endpoint: Query omdbapi.com and return
+/!* Task 1.1. Add the GET /search endpoint: Query omdbapi.com and return
    a list of the results you obtain. Only include the properties 
-   mentioned in the README when sending back the results to the client */
+   mentioned in the README when sending back the results to the client *!/
 app.get("/search", function (req, res) {
     const query = req.query
 
@@ -100,10 +201,10 @@ app.get("/search", function (req, res) {
         })
 })
 
-/* Task 2.2 Add a POST /movies endpoint that receives an array of imdbIDs that the
+/!* Task 2.2 Add a POST /movies endpoint that receives an array of imdbIDs that the
    user selected to be added to the movie collection. Search them on omdbapi.com,
    convert the data to the format we use since exercise 1 and add the data to the
-   movie collection. */
+   movie collection. *!/
 app.post("/movies", async function (req, res) {
     const selectedMovies = req.body
 
@@ -135,8 +236,8 @@ app.delete("/movies/:imdbID", function (req, res) {
     res.sendStatus(200)
 })
 
-/* Task 3.2. Add the DELETE /movies/:imdbID endpoint which removes the movie
-   with the given imdbID from the collection. */
+/!* Task 3.2. Add the DELETE /movies/:imdbID endpoint which removes the movie
+   with the given imdbID from the collection. *!/
 
 function getMovies(imdbID) {
     return new Promise(function (resolve, reject) {
@@ -179,7 +280,7 @@ function getMovies(imdbID) {
             }
         )
     })
-}
+}*/
 
 app.listen(3000);
 

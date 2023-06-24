@@ -14,7 +14,7 @@ h2 {
     text-decoration: underline;
 }
 
-div.session-management {
+div.login_register_field_top_right {
     text-align: right;
     background-color: orange;
     padding: 1px;
@@ -43,8 +43,6 @@ div.results {
 }
 
 form {
-    background-color: orange;
-    padding: 5px;
     text-align: center;
 }
 

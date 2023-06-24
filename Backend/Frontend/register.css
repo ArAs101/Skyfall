@@ -14,7 +14,7 @@ h2 {
     text-decoration: underline;
 }
 
-div.session-management {
+div.login_register_field_top_right {
     text-align: right;
     background-color: orange;
     padding: 1px;
@@ -42,8 +42,16 @@ div.results {
     border-radius: 50%;
 }
 
-form {
-    text-align: center;
+#image {
+    width: 350px;
+    height: 350px;
+    /*border-radius: 50%;*/
+
+}
+
+.circleText {
+    font-size: 40px;
+    padding: -5px;
 }
 
 footer {
