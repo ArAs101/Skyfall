@@ -15,12 +15,20 @@
 </header>
 <main>
   <br>
-  <form>
-  Username: <input>
-  <br>
-  <br>
-  Password: <input>
-  <button type="submit">Register</button>
+
+  <form id="register_form" action="/userregister" method="post">
+    <label for="register_username_input"></label>
+    <p>
+      Username: <input id="register_username_input" placeholder="Username" type="text" required>
+    </p>
+
+
+    <label for="register_password_input"></label>
+    <p>
+      Password: <input id="register_password_input" placeholder="Password" type="text" required>
+    </p>
+
+  <button type="button" id="register_button">Register</button>
 </form>
 </main>
 <br>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Skyfall</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+<header>
+    <h1>Skyfall</h1>
+    <h2>Tomorrow's weather website</h2>
+    <div class="gui">
+        <span>Please enter your credentials in order to log in.</span>
+    </div>
+</header>
+<main>
+    <br>
+    <form id="login_form" action="/userlogin" method="post">
+        <label for="login_username_input"></label>
+        <p>
+            Username: <input type="text" placeholder="Username" id="login_username_input" required>
+        </p>
+
+        <label for="login_password_input"></label>
+        <p>
+            Password: <input type="text" placeholder="Password" id="login_password_input" required>
+        </p>
+
+        <button onclick="window.location.href = 'index_logged_in.html'">Login</button>
+        <p>
+            <a href="reset_password.html">Forgot your password?</a>
+        </p>
+    </form>
+
+
+</main>
+<br>
+<br>
+<br>
+
+<footer>&copy; 2023 <a href="index.html">Skyfall.</a></footer>
+
+</body>
+</html>
