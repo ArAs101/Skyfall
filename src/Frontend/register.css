@@ -2,11 +2,17 @@ body {
     background-image: -webkit-linear-gradient(top left, yellow 0%, blue 100%);
 }
 
+header, #Titles {
+    background-image: url("cloudy_sun.png");
+}
+
+#Titles {
+    text-align: center;
+}
+
 h1 {
-    background-color: green;
     text-align: center;
     text-decoration: underline;
-    font-size: 60pt;
 }
 
 h2 {
@@ -42,8 +48,16 @@ div.results {
     border-radius: 50%;
 }
 
-form {
-    text-align: center;
+#image {
+    width: 350px;
+    height: 350px;
+    /*border-radius: 50%;*/
+
+}
+
+.circleText {
+    font-size: 40px;
+    padding: -5px;
 }
 
 footer {

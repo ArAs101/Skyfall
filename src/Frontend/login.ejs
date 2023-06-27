@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login | Skyfall</title>
-    <link rel="stylesheet" href="login.css">
-</head>
-<body>
 <header>
     <h1>Skyfall</h1>
     <h2>Tomorrow's weather website</h2>
@@ -15,7 +7,7 @@
 </header>
 <main>
     <br>
-    <form id="login_form" action="/userlogin" method="post">
+    <form id="login_form">
         <label for="login_username_input"></label>
         <p>
             Username: <input type="text" placeholder="Username" id="login_username_input" required>
@@ -26,7 +18,7 @@
             Password: <input type="text" placeholder="Password" id="login_password_input" required>
         </p>
 
-        <button onclick="window.location.href = 'index_logged_in.html'">Login</button>
+        <button onclick="performLogin()">Login</button>
         <p>
             <a href="reset_password.html">Forgot your password?</a>
         </p>
@@ -40,5 +32,26 @@
 
 <footer>&copy; 2023 <a href="index.html">Skyfall.</a></footer>
 
-</body>
-</html>
+
+
+<!--
+<h1>Login</h1>
+<% if (messages.error) {%>
+    <%- messages.error%>
+<%}%>
+
+<form action="/login" method="post">
+    <div>
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input type="text" id="password" name="password" required>
+    </div>
+    <button type="submit">Login</button>
+</form>
+-->
+
+<a href="/register">Register</a>
